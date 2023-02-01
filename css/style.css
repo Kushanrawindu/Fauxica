@@ -48,6 +48,16 @@ nav a.active::before{
     bottom: -6px;
 }
 
+nav a::before{
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 1px;
+    border-bottom: 2px solid rgb(122, 122, 122);
+    bottom: -6px;
+    transition: width .3s;
+}
+
 /* hero section */
 
 main{
@@ -135,4 +145,77 @@ p.employees{
 p.details{
     font-size: 1.4rem;
     margin: 0;
+}
+
+.right-col{
+    display: grid;
+    gap: 2.3em;
+    grid-template-columns: repeat(2,auto);
+    grid-template-areas: "left right" "left bottom";
+}
+
+.card{
+    border-radius: .8em;
+    padding: 1.1em;
+    display: flex;
+    align-items: end;
+    background-size: 150%;
+    background-position: center;
+}
+
+.card1{
+    grid-area: left;
+    background-image: url(../img/Component\ 3.png);
+    position: relative;
+}
+
+.card1::before{
+    position: absolute;
+    content: "";
+    background: url(../img/Group4.svg) no-repeat;
+    width: 100%;
+    height: 100%;
+    top: 10px;
+    left: -40px;
+    pointer-events: none;
+}
+
+.card2{
+    background-image: url(../img/Rectangle\ 2.png);
+}
+
+.card3{
+    background-image: url(../img/Rectangle\ 9.png);
+}
+
+.card-details{
+    background: white;
+    border-radius: .6em;
+    padding: 2em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-details a{
+    color: black;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.card-details p{
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+p.product-price{
+    font-size: 1.8rem;
+}
+
+/* microanimations */
+
+nav a:hover::before{
+    width: 35%;
 }
